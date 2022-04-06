@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<script>
+    function formatMMDDYYYY(inputDate){
+        let day = String(inputDate.getDate());
+        let month = String(inputDate.getMonth() + 1);
+        let year = String(inputDate.getFullYear());
+
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+
+        let return_date = month + "/" + day + "/" + year;
+        return return_date;
+
+    }
+    function PageLoad(){
+        let unformatted_date = document.querySelector(".displayunformatteddate");
+        let formatted_date = document.querySelector(".displayformatteddate");
+        let current_date = new Date();
+
+        unformatted_date.innerHTML= "Unformatted Date: " + current_date;
+        formatted_date.innerHTML = "Formatted Date: " + formatMMDDYYYY(current_date);
+    }
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Formatting</title>
+</head>
+<body onload="PageLoad()">
+    <p class="displayunformatteddate"></p>
+    <p class="displayformatteddate"></p>
+</body>
+</html>

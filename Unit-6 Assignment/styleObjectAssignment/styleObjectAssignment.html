@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+
+.style1 {color: #FF0000}
+
+</style>
+<script>
+  function PageLoad(){
+    //variables to use for this script
+    let page_body = document.querySelector(".pagebody")
+    let frog_img = document.querySelector(".frog");
+    let first_paragraph = document.querySelector(".clickme");
+    let second_paragraph = document.querySelector(".hoveron");
+    let header_3_element = document.querySelector(".centerme");
+    let first_button = document.querySelector(".leftalign");
+    let forth_paragraph = document.querySelector(".fontchange");
+    let fifth_paragraph = document.querySelector(".fontclear");
+    let word_selector = document.querySelector(".textmanipulate");
+    let second_button = document.querySelector(".increasesize");
+    let third_button = document.querySelector(".defaultsize");
+    let eigth_paragraph = document.querySelector(".losefocus");
+    let ninth_paragraph = document.querySelector(".hidefrog");
+    let forth_button = document.querySelector(".revealfrog");
+    let thirteenth_paragraph = document.querySelector(".borderme");
+    let forteenth_paragraph = document.querySelector(".bordernone");
+    let fifteenth_paragraph = document.querySelector(".backgroundmanipulate")
+
+    //assigning variables functions
+    first_paragraph.onclick = function(){page_body.style.color = "red"};
+    second_paragraph.onmouseover = function(){header_3_element.style.textAlign = "center"}; 
+    first_button.onclick = function(){header_3_element.style.textAlign = "left"};
+    forth_paragraph.onmouseover = function(){page_body.style.fontFamily = "Comic sans MS"};
+    fifth_paragraph.onclick = function(){page_body.style.fontFamily = "initial"};
+    second_button.onclick = function(){word_selector.style.fontSize  = "24px"};
+    third_button.onclick = function(){word_selector.style.fontSize = "initial"};
+    eigth_paragraph.onmouseout = function(){eigth_paragraph.style.background = "yellow"};
+    ninth_paragraph.onclick = function(){frog_img.style.display = "none"};
+    forth_button.onclick = function(){frog_img.style.display = "inline"};
+    frog_img.onmouseover = function(){frog_img.style.scale = "2"};
+    frog_img.onclick = function(){frog_img.style.scale = "1"};
+    thirteenth_paragraph.ondblclick = function(){thirteenth_paragraph.style.border = "4px solid black"};
+    forteenth_paragraph.onmouseout = function(){thirteenth_paragraph.style.border = "0 none" };
+    fifteenth_paragraph.onmouseover = function(){fifteenth_paragraph.style.background = "green"};
+    fifteenth_paragraph.onmouseout = function(){fifteenth_paragraph.style.background = "initial"};
+
+  }
+</script>
+</head>
+<!--Added onload to make sure elements are loaded on page.-->
+<body class="pagebody" onload="PageLoad()">
+<h1>WDV221 Intro Javascript</h1>
+<h3 class="centerme">Style Object - CSS Interactions - In Class Exercises</h3>
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+<p class="clickme">1. Click this paragraph to change the font color to red.</p>
+<p class="hoveron">2. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+<p>3. Click the button to left align the H3 element. </p>
+<p>
+  <label>
+  <input class="leftalign" type="submit" name="button" id="button" value="Submit" />
+  </label>
+</p>
+<p class="fontchange">4. Mouseover this paragraph to change the font to a font of you choice.</p>
+<p class="fontclear"> 5. Click on this paragraph to return the font to the default font.</p>
+<p>6. Click on the button to make the word <span class="textmanipulate">SALE</span> font size 24. </p>
+<p>
+  <label>
+  <input class="increasesize" type="submit" name="button2" id="button2" value="Submit" />
+  </label>
+</p>
+<p>7. Click on the button to return the word to its original size.</p>
+<p>
+  <label>
+    <input class="defaultsize" type="submit" name="button3" id="button3" value="Submit" />
+  </label>
+</p>
+<p class="losefocus">8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+<p class="hidefrog">9. Use an onclick event to hide the Frog image shown below.</p>
+<p>10. Use the following button to make the Frog image shown below reappear.</p>
+<p>
+  <input class="revealfrog" type="submit" name="button4" id="button4" value="Submit" />
+</p>
+<p>11. Mouseover the Frong image to make its height and width double its original size. </p>
+<p><img class="frog" src="frog.jpg" width="100" height="100" /></p>
+<p>12. Use a click event on the Frog image to make it return to original size. </p>
+<p class="borderme">13. Doubleclick on this paragraph to place a border around this paragraph.</p>
+<p class="bordernone">14. Use an event handler of your choice to remove the border from the previous paragraph. </p>
+<p class="backgroundmanipulate">15. Mouseover this paragraph to turn its background color to green. When you mouseoff the paragraph return it to its normal color. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
