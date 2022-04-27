@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+
+    <script>
+        let bookTitles = ["Beginning Javascript", "Logic with ES6", "Javascript Ojbects Made Easy"];
+
+        let bookPrices = [19.99, 29.49, 999.99];
+
+        let bookAuthor = ["Smith", "Johson-Parker", "Westin"];
+
+        let javascriptBooks = [];
+
+        class book{
+            constructor(title,price,author){
+                this.title = title;
+                this.price = price;
+                this.author = author;
+            }
+            studentDiscountPrice(){
+                return this.price * .8;
+            }
+        }
+
+
+        const book1 = new book(bookTitles[0],bookPrices[0],bookAuthor[0]);
+        const book2 = new book(bookTitles[1],bookPrices[1],bookAuthor[1]);
+        const book3 = new book(bookTitles[2],bookPrices[2],bookAuthor[2]);
+
+        javascriptBooks.push(book1);
+        javascriptBooks.push(book2);
+        javascriptBooks.push(book3);
+    </script>
+    <style>
+        div{
+            border: 1px solid black;
+            margin-bottom: 5px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Objects</h1>
+    <script>
+        javascriptBooks.forEach(book => {
+            document.write("<div>");
+            document.write("<p>Title: " + book.title + "</p>");
+            document.write("<p>Author: " + book.author + "</p>");
+            document.write("<p>Original Price: $" + book.price + "</p>");
+            document.write("<p>Discount Price: $" + book.studentDiscountPrice().toFixed(2) + "</p>");
+            document.write("</div>");
+        });
+    </script>
+</body>
+
+</html>
